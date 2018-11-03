@@ -115,11 +115,32 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `username`, `password`, `register_date`) VALUES
-(1, 'Brad Traversy', 'brad@gmail.com', 'brad', 'e10adc3949ba59abbe56e057f20f883e', '2017-04-10 13:14:31'),
-(2, 'John Doe', 'jdoe@gmail.com', 'john', 'e10adc3949ba59abbe56e057f20f883e', '2017-04-10 14:12:14'),
-(3, 'ara', 'andiariyandi25@gmail.com', 'ara', '636bfa0fb2716ff876f5e33854cc9648', '2018-10-31 00:13:18'),
-(4, 'Andi', 'andiariyandi24@gmail.com', 'andi', '202cb962ac59075b964b07152d234b70', '2018-10-31 00:21:14'),
-(5, 'aziz', 'aziz@gmail.com', 'aziz', 'b85dc795ba17cb243ab156f8c52124e1', '2018-10-31 12:42:04');
+(1, 'ara', 'andiariyandi25@gmail.com', 'ara', '636bfa0fb2716ff876f5e33854cc9648', '2018-10-31 00:13:18'),
+(2, 'Andi', 'andiariyandi24@gmail.com', 'andi', '202cb962ac59075b964b07152d234b70', '2018-10-31 00:21:14'),
+(3, 'aziz', 'aziz@gmail.com', 'aziz', 'b85dc795ba17cb243ab156f8c52124e1', '2018-10-31 12:42:04');
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `destinations`
+--
+
+CREATE TABLE `destinations` (
+  `id` int(11) NOT NULL,
+  `destination` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `origins`
+--
+
+CREATE TABLE `origins` (
+  `id` int(11) NOT NULL,
+  `origin` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
