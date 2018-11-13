@@ -132,7 +132,16 @@ CREATE TABLE `destinations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
+--
+-- Dumping data untuk tabel `destinations`
+--
 
+INSERT INTO `destinations` (`id`, `destination`) VALUES
+(1, 'Lampung'),
+(2, 'Jambi'),
+(3, 'Palembang');
+
+--
 --
 -- Table structure for table `origins`
 --
@@ -142,9 +151,49 @@ CREATE TABLE `origins` (
   `origin` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+--
+-- Dumping data untuk tabel `origins`
+--
+
+INSERT INTO `origins` (`id`, `origin`) VALUES
+(1, 'Lampung'),
+(2, 'Jambi'),
+(3, 'Palembang');
+--
+-- Table structure for table `origins`
+--
+
+CREATE TABLE `tickets` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `origin_id` int(11) NOT NULL,
+  `destination_id` int(11) NOT NULL,
+  `price` int(20) NOT NULL,
+  `schedule` date NOT NULL,
+  `status` varchar(15) NOT NULL,
+  `ticket_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tickets`
+--
+
+INSERT INTO `tickets` (`id`, `user_id`, `origin_id`, `destination_id`, `price`, `schedule`, `ticket_date`, `status`) VALUES
+(1, 1, 1, 2, 100000, '2018-11-16 07:00:00', '2018-11-01 13:11:21', 'LUNAS`),
+(1, 1, 1, 3, 200000, '2018-11-17 07:00:00', '2018-11-02 14:40:57', `BELUM LUNAS`),
+(1, 1, 2, 1, 100000, '2018-11-18 07:00:00', '2018-11-03 14:15:19', `LUNAs`),
+(1, 1, 3, 1, 100000, '2018-11-19 07:00:00', '2018-11-04 15:20:10', `BELUM LUNAS`),
+(1, 2, 1, 2, 100000, '2018-11-20 07:00:00', '2018-11-05 16:17:30', `BELUM LUNAS`);
+
 --
 -- Indexes for dumped tables
 --
+--
+-- Indeks untuk tabel `tickets`
+--
+ALTER TABLE `tickets`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `categories`
