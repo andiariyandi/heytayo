@@ -15,8 +15,7 @@
 	</head>
 
 	<body>
-  <div id="splash"> <img src="<?php echo base_url().'assets/images/logo.png'?>" alt="" />
-</div>
+  
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="<?php echo base_url(); ?>">HeyTayo</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
