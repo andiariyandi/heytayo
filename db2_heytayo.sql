@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 31 Okt 2018 pada 18.12
+-- Waktu pembuatan: 23 Nov 2018 pada 06.36
 -- Versi server: 10.1.35-MariaDB
 -- Versi PHP: 7.2.9
 
@@ -40,9 +40,9 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `user_id`, `name`, `created_at`) VALUES
-(1, 0, 'Technology', '2017-03-04 13:03:18'),
-(2, 0, 'Business', '2017-03-04 13:14:40'),
-(3, 3, 'ra', '2018-10-31 00:13:33');
+(7, 8, 'Pengalaman Baik', '2018-11-23 04:58:55'),
+(8, 8, 'Pengalaman Buruk', '2018-11-23 04:59:08'),
+(9, 8, 'Fasilitas', '2018-11-23 04:59:36');
 
 -- --------------------------------------------------------
 
@@ -64,8 +64,9 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `post_id`, `name`, `email`, `body`, `created_at`) VALUES
-(1, 2, 'John Doe', 'jdoe@gmail.com', 'Great Post!', '2017-03-17 13:57:29'),
-(2, 2, 'Jan Doe', 'jane@yahoo.com', 'Thank you for this awesome post', '2017-03-17 14:05:58');
+(3, 13, 'Andi Ariyandi', 'andi@gmail.com', 'Wah iya tadi saya lwat jalan itu, Harap hati-hati para pengendaraaa....', '2018-11-23 05:21:19'),
+(4, 13, 'Wijaya', 'azizwijaya25@gmail.com', 'astagfirullah... gimana itu para penumang nyaaa??', '2018-11-23 05:22:02'),
+(5, 13, 'Maria', 'maria@gmail.com', 'Thx info, smga para penumpang selamat smua.', '2018-11-23 05:22:53');
 
 -- --------------------------------------------------------
 
@@ -89,11 +90,11 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `category_id`, `user_id`, `judul`, `slug`, `body`, `post_image`, `created_at`) VALUES
-(1, 1, 1, 'Blog Post 1', 'Blog-Post-1', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et molestie eros. Maecenas dignissim, erat at faucibus finibus, nunc nibh finibus lacus, sed gravida leo urna at erat. Proin et efficitur dolor, eget interdum enim. Cras nec ante quis tellus gravida ornare. Duis arcu lacus, elementum quis iaculis id, mattis ut turpis. Pellentesque id dignissim dolor. Curabitur finibus facilisis pulvinar. Nullam urna arcu, malesuada a purus a, pharetra pulvinar lacus. Curabitur quis ornare felis, ut ultrices nulla.</p>\r\n\r\n<p>Fusce placerat aliquam erat, et sagittis diam accumsan vitae. In elementum vel augue sit amet bibendum. Nulla cursus elit metus. Ut auctor nisl quis bibendum tincidunt. Integer gravida nisi id urna rhoncus, nec tristique magna efficitur. Mauris non blandit ipsum, ut tempus purus. Praesent rhoncus gravida aliquam. Nulla finibus mi id fermentum fringilla. Morbi volutpat, massa eget sodales tempus, est risus elementum leo, pulvinar fermentum diam nibh a mi. Phasellus porttitor vitae mauris non elementum. Sed ut lacinia sapien. Proin a metus ullamcorper lectus ultricies euismod. Donec vitae turpis eros. Morbi at imperdiet ligula. Mauris sed rutrum lectus. Phasellus eget nulla congue, dictum dolor ac, dapibus justo.</p>\r\n', 'OS_Ubuntu.png', '2017-03-17 13:22:28'),
-(2, 2, 1, 'Blog Post 2', 'Blog-Post-2', '<p>. Cras nec ante quis tellus gravida ornare. Duis arcu lacus, elementum quis iaculis id, mattis ut turpis. Pellentesque id dignissim dolor. Curabitur finibus facilisis pulvinar. Nullam urna arcu, malesuada a purus a, pharetra pulvinar lacus. Curabitur quis ornare felis, ut ultrices nulla.</p>\r\n\r\n<p>Fusce placerat aliquam erat, et sagittis diam accumsan vitae. In elementum vel augue sit amet bibendum. Nulla cursus elit metus. Ut auctor nisl quis bibendum tincidunt. Intes elementum leo, pulvinar fermentum diam nibh a mi. Phasellus porttitor vitae mauris non elementum. Sed ut lacinia sapien. Proin a metus ullamcorper lectus ultricies euismod. Donec vitae turpis eros. Morbi at imperdiet ligula. Mauris sed rutrum lectus. Phasellus eget nulla congue, dictum dolor ac, dapibus justo.</p>\r\n', 'ci.png', '2017-03-17 13:23:23'),
-(3, 2, 2, 'Test Post', 'Test-Post', '<p>Test</p>\r\n', 'noimage.jpg', '2017-04-10 14:15:59'),
-(4, 1, 4, 'hahah', 'hahah', '<p>haha</p>\r\n', 'noimage.jpg', '2018-10-31 12:48:29'),
-(5, 2, 4, 'hhhh', 'hhhh', '<p>hhhhh</p>\r\n', 'ikon.png', '2018-10-31 12:49:46');
+(11, 7, 8, 'Asyiknya Pulang Ke Lampung', 'Asyiknya-Pulang-Ke-Lampung', '<p>Haloo readers... saya mau berbagi pengalam saya pulang kampung ke lampung.&nbsp;</p>\r\n\r\n<p>Saya dari Pekan Baru ke Lampung menggunakan BUS, ternyata sungguh menyenangkan :).</p>\r\n\r\n<p>Ayo yang lain silahkan coba menggunakan transportasi BUS..</p>\r\n', 'adi.jpg', '2018-11-23 05:02:10'),
+(12, 7, 9, 'Mencoba Becak ke Pasar Tugu', 'Mencoba-Becak-ke-Pasar-Tugu', 'Hari Minggu pagi yang cerah kakak saya mencoba naik becak untuk ke pasar. katanya agar menikmati perjalanan ke pasar nya. Sungguh lucu ekspresi kakak saya , karena merupakan pengalaman pertamanya menaiki becak. HAhahahha.\r\nTransportasi Becak di daerah kami masih lumayan cukup banyak terdapat di perempatan jalan-jalan.', 'becak.jpg', '2018-11-23 05:08:42'),
+(13, 8, 9, 'AWASS!! Ada Kecelakaan', 'AWASS-Ada-Kecelakaan', 'Dijalan diponegoro arah ke kalibata harap para penggendara lebih berhati-hati ketika melintasi jalan tersebut. Saat ini telah terjadi kecelakaan Bus yang cukup menghambat jalanan. Kabarkan berita ini siapa tahu ada keluarga yang sedang bepergian dengan bus yang Dengan BE \r\nKita doakan semoga korban selamat semua amin ', 'kecelakaan.jpg', '2018-11-23 05:11:47'),
+(14, 8, 9, 'Angkot Oh Angkot!', 'Angkot-Oh-Angkot', 'Perjalan pulang dari kampus saya mengalami beberapa kali gangguan. And Mostlyy... Angkotlah sang biang masalahnya, beberapa kali ada angkot yang menyrobot jalan dan berhenti tanpa aba-aba, kan saya keget jadi nya...\r\n\r\noh iyaa.. saya ada foto nye ketika ada razia jalanan, Angkot itu pun kena razia, hahahahh', 'razia.JPG', '2018-11-23 05:16:20'),
+(17, 9, 8, 'Lorena Terbaikkkk!', 'Lorena-Terbaikkkk', '<p>Tidak lah mengecewakan ketika berpergian dengan transpotasi Bus Lintas Sumatera dengan Lorena BUS. karena apa? fisilitasnya sanagt baik. seeprti full AC, terdapat terminal Listrik, Sopir tidak ugal-ugalan, tepat waktu, kursi nya cukup nyaman dan diberi selimut.</p>\r\n', 'kursibus4.jpg', '2018-11-23 05:20:31');
 
 -- --------------------------------------------------------
 
@@ -115,85 +116,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `username`, `password`, `register_date`) VALUES
-(1, 'ara', 'andiariyandi25@gmail.com', 'ara', '636bfa0fb2716ff876f5e33854cc9648', '2018-10-31 00:13:18'),
-(2, 'Andi', 'andiariyandi24@gmail.com', 'andi', '202cb962ac59075b964b07152d234b70', '2018-10-31 00:21:14'),
-(3, 'aziz', 'aziz@gmail.com', 'aziz', 'b85dc795ba17cb243ab156f8c52124e1', '2018-10-31 12:42:04');
-
-
--- --------------------------------------------------------
-
---
--- Table structure for table `destinations`
---
-
-CREATE TABLE `destinations` (
-  `id` int(11) NOT NULL,
-  `destination` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
---
--- Dumping data untuk tabel `destinations`
---
-
-INSERT INTO `destinations` (`id`, `destination`) VALUES
-(1, 'Lampung'),
-(2, 'Jambi'),
-(3, 'Palembang');
-
---
---
--- Table structure for table `origins`
---
-
-CREATE TABLE `origins` (
-  `id` int(11) NOT NULL,
-  `origin` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
---
--- Dumping data untuk tabel `origins`
---
-
-INSERT INTO `origins` (`id`, `origin`) VALUES
-(1, 'Lampung'),
-(2, 'Jambi'),
-(3, 'Palembang');
---
--- Table structure for table `origins`
---
-
-CREATE TABLE `tickets` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `origin_id` int(11) NOT NULL,
-  `destination_id` int(11) NOT NULL,
-  `price` int(20) NOT NULL,
-  `schedule` date NOT NULL,
-  `status` varchar(15) NOT NULL,
-  `ticket_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tickets`
---
-
-INSERT INTO `tickets` (`id`, `user_id`, `origin_id`, `destination_id`, `price`, `schedule`, `ticket_date`, `status`) VALUES
-(1, 1, 1, 2, 100000, '2018-11-16 07:00:00', '2018-11-01 13:11:21', 'LUNAS`),
-(1, 1, 1, 3, 200000, '2018-11-17 07:00:00', '2018-11-02 14:40:57', `BELUM LUNAS`),
-(1, 1, 2, 1, 100000, '2018-11-18 07:00:00', '2018-11-03 14:15:19', `LUNAs`),
-(1, 1, 3, 1, 100000, '2018-11-19 07:00:00', '2018-11-04 15:20:10', `BELUM LUNAS`),
-(1, 2, 1, 2, 100000, '2018-11-20 07:00:00', '2018-11-05 16:17:30', `BELUM LUNAS`);
+(8, 'Andi Ariyandi', 'andi@gmail.com', 'andi', 'ce0e5bf55e4f71749eade7a8b95c4e46', '2018-11-23 04:48:55'),
+(9, 'Aziz Wijaya', 'azizwijaya25@gmail.com', 'aziz', 'b85dc795ba17cb243ab156f8c52124e1', '2018-11-23 04:49:23'),
+(10, 'Adi Ramadhan', 'adi@gmail.com', 'adi', 'c46335eb267e2e1cde5b017acb4cd799', '2018-11-23 04:49:57');
 
 --
 -- Indexes for dumped tables
 --
---
--- Indeks untuk tabel `tickets`
---
-ALTER TABLE `tickets`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `categories`
@@ -227,25 +156,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
